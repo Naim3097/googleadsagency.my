@@ -1,0 +1,10 @@
+# https://googleadsagency.my robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin/utility paths
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://googleadsagency.my/sitemap.xml
