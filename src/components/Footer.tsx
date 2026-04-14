@@ -19,10 +19,19 @@ const FOOTER_SECTIONS = [
     title: 'Tools We Recommend',
     links: [
       { href: 'https://ads.google.com', label: 'Google Ads', external: true },
-      { href: 'https://analytics.google.com', label: 'Google Analytics', external: true },
+      {
+        href: 'https://analytics.google.com',
+        label: 'Google Analytics',
+        external: true,
+      },
+      {
+        href: 'https://nexova.my',
+        label: 'Nexova',
+        external: true,
+        nofollow: true,
+      },
+      { href: 'https://leanx.io', label: 'Lean.x Payments', external: true },
       { href: 'https://www.semrush.com', label: 'Semrush', external: true },
-      { href: 'https://nexova.my', label: 'Nexova', external: true, nofollow: true },
-      { href: 'https://unbounce.com', label: 'Unbounce', external: true },
     ],
   },
 ];
@@ -33,17 +42,24 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <span className="text-lg font-extrabold text-white">
-              Google<span className="text-primary-light">Ads</span>Agency
-            </span>
+            <Link to="/" className="flex items-center">
+              <img
+                src="/googleadsagency-logo.png"
+                alt="GoogleAdsAgency"
+                className="h-7 brightness-0 invert"
+              />
+            </Link>
             <p className="mt-3 text-sm text-gray-400 leading-relaxed">
-              Data-driven Google Ads strategies and PPC guides for Malaysian businesses.
+              Data-driven Google Ads strategies and PPC guides for Malaysian
+              businesses.
             </p>
           </div>
 
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title}>
-              <h3 className="font-semibold text-white text-sm mb-3">{section.title}</h3>
+              <h3 className="font-semibold text-white text-sm mb-3">
+                {section.title}
+              </h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href}>
@@ -73,7 +89,8 @@ export default function Footer() {
 
         <div className="mt-10 pt-8 border-t border-blue-900 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} GoogleAdsAgency.my. All rights reserved.
+            &copy; {new Date().getFullYear()} GoogleAdsAgency.my. All rights
+            reserved.
           </p>
           <p className="text-xs text-gray-600">
             Not affiliated with Google LLC.
