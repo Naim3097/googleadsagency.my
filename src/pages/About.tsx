@@ -23,17 +23,16 @@ export default function About() {
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         <FadeIn>
           <h1 className="text-3xl md:text-4xl font-medium text-white tracking-tight" style={{ letterSpacing: '-0.02em' }}>About</h1>
+          <p className="mt-3 text-white/50 text-sm max-w-xl leading-relaxed">
+            GoogleAdsAgency.my is a resource hub built for Malaysian businesses who want to run smarter, more profitable Google Ads campaigns — without the guesswork. Every guide, checklist, and strategy on this site comes from real campaign experience in the local market.
+          </p>
         </FadeIn>
 
         <FadeIn delay={120}>
-          <div className="mt-8 flex flex-col sm:flex-row gap-6 items-start">
-            <div className="w-16 h-16 rounded-2xl bg-secondary/20 border border-primary/20 flex items-center justify-center text-primary text-xl font-bold shrink-0">
-              HR
-            </div>
-            <div>
-              <h2 className="text-lg font-semibold text-white">Hafiz Rahman</h2>
-              <p className="text-primary text-sm font-medium">Google Ads Strategist</p>
-              <div className="mt-4 space-y-3 text-white/60 text-sm leading-relaxed">
+          <div className="mt-8">
+            <h2 className="text-lg font-semibold text-white">Hafiz Rahman</h2>
+            <p className="text-primary text-sm font-medium mt-0.5">Google Ads Strategist</p>
+            <div className="mt-4 space-y-3 text-white/60 text-sm leading-relaxed">
                 <p>
                   I have spent the last 6 years managing Google Ads campaigns for Malaysian
                   businesses — from single-location clinics in Penang to multi-branch retail
@@ -53,7 +52,6 @@ export default function About() {
                   accounts. No hypothetical examples. No generic global advice.
                 </p>
               </div>
-            </div>
           </div>
         </FadeIn>
 
