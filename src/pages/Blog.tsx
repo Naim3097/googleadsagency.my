@@ -30,8 +30,8 @@ export default function Blog() {
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         <FadeIn>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">Blog</h1>
-          <p className="text-gray-500 mt-2 text-sm max-w-lg">
+          <h1 className="text-3xl md:text-4xl font-medium text-white tracking-tight" style={{ letterSpacing: '-0.02em' }}>Blog</h1>
+          <p className="text-white/45 mt-2 text-sm max-w-lg">
             Practical Google Ads guides and PPC strategies for Malaysian businesses.
           </p>
         </FadeIn>
@@ -42,10 +42,10 @@ export default function Blog() {
               <button
                 key={c}
                 onClick={() => setCat(c)}
-                className={`px-3.5 py-1.5 rounded text-xs font-semibold transition-colors ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 ${
                   cat === c
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    ? 'bg-primary/15 text-primary border border-primary/30'
+                    : 'bg-white/5 text-white/50 border border-white/8 hover:bg-white/10 hover:text-white/80'
                 }`}
               >
                 {c}
@@ -57,17 +57,17 @@ export default function Blog() {
         {/* Featured read */}
         {cat === 'All' && filtered.length > 0 && (
           <FadeIn>
-            <Link to={`/blog/${filtered[0].slug}`} className="block mt-8 group border border-gray-200 rounded-xl p-6 md:p-8 hover:border-primary/30 hover:shadow-sm transition-all">
+            <Link to={`/blog/${filtered[0].slug}`} className="block mt-8 glass-card rounded-2xl p-6 md:p-8 group">
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-secondary bg-secondary/8 px-2 py-0.5 rounded">Featured Read</span>
-                <span className="text-[10px] text-gray-400 uppercase tracking-wider">{filtered[0].readTime}</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-secondary bg-secondary/15 border border-secondary/20 px-2 py-0.5 rounded-full">Featured Read</span>
+                <span className="text-[10px] text-white/35 uppercase tracking-wider">{filtered[0].readTime}</span>
               </div>
-              <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 group-hover:text-primary transition-colors leading-snug">
+              <h2 className="text-xl md:text-2xl font-semibold text-white group-hover:text-primary transition-colors duration-150 leading-snug tracking-tight">
                 {filtered[0].title}
               </h2>
-              <p className="mt-2 text-gray-500 leading-relaxed max-w-2xl">{filtered[0].excerpt}</p>
-              <div className="mt-4 flex items-center gap-3 text-xs text-gray-400">
-                <span className="font-medium text-gray-600">{filtered[0].author}</span>
+              <p className="mt-2 text-white/50 leading-relaxed max-w-2xl">{filtered[0].excerpt}</p>
+              <div className="mt-4 flex items-center gap-3 text-xs text-white/35">
+                <span className="font-medium text-white/55">{filtered[0].author}</span>
                 <span>&middot;</span>
                 <span>{filtered[0].date}</span>
                 <span className="ml-auto text-primary font-semibold group-hover:underline">Read the full guide →</span>

@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-[#1c1c1d]/80 backdrop-blur-xl border-b border-white/8">
       <nav className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
         <Link to="/" className="flex items-center">
           <img
@@ -29,10 +29,10 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 to={link.href}
-                className={`text-sm font-medium transition-colors border-b-2 pb-0.5 ${
+                className={`text-sm font-medium transition-colors duration-150 border-b-2 pb-0.5 ${
                   pathname === link.href
                     ? 'border-primary text-primary'
-                    : 'border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300'
+                    : 'border-transparent text-white/50 hover:text-white hover:border-white/30'
                 }`}
               >
                 {link.label}
@@ -43,11 +43,11 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-md hover:bg-gray-100"
+          className="md:hidden p-2 rounded-md hover:bg-white/8"
           aria-label={open ? 'Close menu' : 'Open menu'}
         >
           <svg
-            className="w-5 h-5 text-gray-700"
+            className="w-5 h-5 text-white/70"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -72,17 +72,17 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
+        <div className="md:hidden border-t border-white/8 bg-[#1c1c1d]/95 backdrop-blur-xl">
           <ul className="px-4 py-2 space-y-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   to={link.href}
                   onClick={() => setOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-sm font-medium ${
+                  className={`block px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-150 ${
                     pathname === link.href
-                      ? 'bg-primary/5 text-primary'
-                      : 'text-gray-600 hover:bg-gray-50'
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-white/60 hover:bg-white/6 hover:text-white'
                   }`}
                 >
                   {link.label}

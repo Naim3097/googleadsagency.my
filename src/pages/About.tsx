@@ -22,18 +22,18 @@ export default function About() {
 
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         <FadeIn>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">About</h1>
+          <h1 className="text-3xl md:text-4xl font-medium text-white tracking-tight" style={{ letterSpacing: '-0.02em' }}>About</h1>
         </FadeIn>
 
         <FadeIn delay={120}>
           <div className="mt-8 flex flex-col sm:flex-row gap-6 items-start">
-            <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center text-white text-xl font-bold shrink-0">
+            <div className="w-16 h-16 rounded-2xl bg-secondary/20 border border-primary/20 flex items-center justify-center text-primary text-xl font-bold shrink-0">
               HR
             </div>
             <div>
-              <h2 className="text-lg font-bold text-gray-900">Hafiz Rahman</h2>
+              <h2 className="text-lg font-semibold text-white">Hafiz Rahman</h2>
               <p className="text-primary text-sm font-medium">Google Ads Strategist</p>
-              <div className="mt-4 space-y-3 text-gray-600 text-sm leading-relaxed">
+              <div className="mt-4 space-y-3 text-white/60 text-sm leading-relaxed">
                 <p>
                   I have spent the last 6 years managing Google Ads campaigns for Malaysian
                   businesses — from single-location clinics in Penang to multi-branch retail
@@ -64,29 +64,29 @@ export default function About() {
             { value: '150+', label: 'Campaigns launched' },
           ].map((stat, i) => (
             <FadeIn key={stat.label} delay={i * 90}>
-              <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-xl font-extrabold text-primary">{stat.value}</div>
-                <div className="text-xs text-gray-500 mt-1">{stat.label}</div>
+              <div className="glass-card text-center p-4 rounded-xl">
+                <div className="text-xl font-bold text-primary">{stat.value}</div>
+                <div className="text-xs text-white/45 mt-1">{stat.label}</div>
               </div>
             </FadeIn>
           ))}
         </div>
 
         <FadeIn delay={100}>
-          <div className="mt-10 border border-gray-200 rounded-xl p-5 md:p-6">
-            <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Approach</h2>
-            <ul className="mt-3 space-y-2.5 text-sm text-gray-600">
+          <div className="mt-10 glass-card rounded-xl p-5 md:p-6">
+            <h2 className="text-sm font-semibold text-white/70 uppercase tracking-wider">Approach</h2>
+            <ul className="mt-3 space-y-2.5 text-sm text-white/55">
               <li className="flex gap-3">
                 <span className="text-primary font-bold">01</span>
-                <span><strong>Data-driven.</strong> Every recommendation is backed by real campaign performance from Malaysian accounts.</span>
+                <span><strong className="text-white/80">Data-driven.</strong> Every recommendation is backed by real campaign performance from Malaysian accounts.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold">02</span>
-                <span><strong>Practical.</strong> Step-by-step processes you can implement today, not marketing theory.</span>
+                <span><strong className="text-white/80">Practical.</strong> Step-by-step processes you can implement today, not marketing theory.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold">03</span>
-                <span><strong>Local.</strong> Malaysian CPC benchmarks, bilingual keyword strategies, and audience behaviors specific to our market.</span>
+                <span><strong className="text-white/80">Local.</strong> Malaysian CPC benchmarks, bilingual keyword strategies, and audience behaviors specific to our market.</span>
               </li>
             </ul>
           </div>

@@ -13,8 +13,8 @@ export default function Contact() {
 
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         <FadeIn>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">Contact</h1>
-          <p className="text-gray-500 mt-2 text-sm">
+          <h1 className="text-3xl md:text-4xl font-medium text-white tracking-tight" style={{ letterSpacing: '-0.02em' }}>Contact</h1>
+          <p className="text-white/45 mt-2 text-sm">
             Have a question about Google Ads? Want to suggest an article topic? Send us a message.
           </p>
         </FadeIn>
@@ -24,19 +24,19 @@ export default function Contact() {
             <ContactForm />
           </FadeIn>
 
-          <div className="md:col-span-2 space-y-4">
+          <div className="md:col-span-2 space-y-3">
             {[
               { title: 'Email', content: 'hello@googleadsagency.my', href: 'mailto:hello@googleadsagency.my' },
               { title: 'Response Time', content: 'Usually within 1–2 business days' },
               { title: 'Based in', content: 'Kuala Lumpur, Malaysia' },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={150 + i * 80}>
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider">{item.title}</h3>
+                <div className="glass-card rounded-xl p-4">
+                  <h3 className="font-semibold text-white/50 text-xs uppercase tracking-wider">{item.title}</h3>
                   {'href' in item ? (
                     <a href={item.href} className="text-primary text-sm hover:underline mt-1 block">{item.content}</a>
                   ) : (
-                    <p className="text-sm text-gray-500 mt-1">{item.content}</p>
+                    <p className="text-sm text-white/70 mt-1">{item.content}</p>
                   )}
                 </div>
               </FadeIn>

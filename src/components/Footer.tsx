@@ -38,7 +38,7 @@ const FOOTER_SECTIONS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-950 text-gray-300">
+    <footer className="border-t border-white/8 bg-[#141415]/80 backdrop-blur-xl text-white/60">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title}>
-              <h3 className="font-semibold text-white text-sm mb-3">
+            <h3 className="font-semibold text-white/90 text-sm mb-3">
                 {section.title}
               </h3>
               <ul className="space-y-2">
@@ -68,14 +68,14 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel={`noopener noreferrer${'nofollow' in link && link.nofollow ? ' nofollow' : ''}`}
-                        className="text-sm text-gray-400 hover:text-white transition-colors"
+                        className="text-sm text-white/50 hover:text-primary transition-colors duration-150"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         to={link.href}
-                        className="text-sm text-gray-400 hover:text-white transition-colors"
+                        className="text-sm text-white/50 hover:text-primary transition-colors duration-150"
                       >
                         {link.label}
                       </Link>
@@ -87,12 +87,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-10 pt-8 border-t border-blue-900 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
+        <div className="mt-10 pt-8 border-t border-white/8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-white/30">
             &copy; {new Date().getFullYear()} GoogleAdsAgency.my. All rights
             reserved.
           </p>
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-white/20">
             Not affiliated with Google LLC.
           </p>
         </div>

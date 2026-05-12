@@ -88,23 +88,23 @@ export default function BlogPost() {
       />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-        <nav className="flex items-center gap-1.5 text-sm text-gray-400 mb-8">
-          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+        <nav className="flex items-center gap-1.5 text-sm text-white/35 mb-8">
+          <Link to="/" className="hover:text-primary transition-colors duration-150">Home</Link>
           <span>/</span>
-          <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
+          <Link to="/blog" className="hover:text-primary transition-colors duration-150">Blog</Link>
           <span>/</span>
-          <span className="text-gray-600 truncate">{article.title}</span>
+          <span className="text-white/55 truncate">{article.title}</span>
         </nav>
 
         <header>
-          <span className="inline-block text-xs font-semibold text-primary bg-primary/8 px-2 py-0.5 rounded">
+          <span className="inline-block text-xs font-semibold text-primary bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-full">
             {article.category}
           </span>
-          <h1 className="mt-3 text-2xl md:text-3xl font-extrabold text-gray-900 leading-tight">
+          <h1 className="mt-3 text-2xl md:text-3xl font-medium text-white leading-tight tracking-tight" style={{ letterSpacing: '-0.02em' }}>
             {article.title}
           </h1>
-          <div className="mt-3 flex items-center gap-2 text-sm text-gray-500">
-            <span className="font-medium text-gray-700">{article.author}</span>
+          <div className="mt-3 flex items-center gap-2 text-sm text-white/40">
+            <span className="font-medium text-white/60">{article.author}</span>
             <span>&middot;</span>
             <time dateTime={article.dateISO}>{article.date}</time>
             <span>&middot;</span>
@@ -113,21 +113,21 @@ export default function BlogPost() {
         </header>
 
         <div
-          className="mt-10 prose prose-gray max-w-none"
+          className="mt-10 prose prose-invert prose-dark max-w-none"
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
         {article.faq.length > 0 && (
-          <section className="mt-12 border-t border-gray-100 pt-10">
-            <h2 className="text-xl font-extrabold text-gray-900 mb-5">Frequently Asked Questions</h2>
-            <div className="space-y-3">
+          <section className="mt-12 border-t border-white/8 pt-10">
+            <h2 className="text-xl font-semibold text-white mb-5 tracking-tight">Frequently Asked Questions</h2>
+            <div className="space-y-2">
               {article.faq.map((q, i) => (
-                <details key={i} className="group border border-gray-100 rounded-lg">
-                  <summary className="cursor-pointer px-4 py-3 font-medium text-sm text-gray-900 flex items-center justify-between">
+                <details key={i} className="glass-card rounded-xl group">
+                  <summary className="cursor-pointer px-4 py-3 font-medium text-sm text-white/80 flex items-center justify-between">
                     {q.question}
-                    <span className="text-gray-400 group-open:rotate-45 transition-transform">+</span>
+                    <span className="text-white/30 group-open:rotate-45 transition-transform duration-150">+</span>
                   </summary>
-                  <div className="px-4 pb-3 text-sm text-gray-600 leading-relaxed">{q.answer}</div>
+                  <div className="px-4 pb-3 text-sm text-white/55 leading-relaxed">{q.answer}</div>
                 </details>
               ))}
             </div>
@@ -135,17 +135,17 @@ export default function BlogPost() {
         )}
 
         {related.length > 0 && (
-          <section className="mt-12 border-t border-gray-100 pt-10">
-            <h2 className="text-lg font-bold text-gray-900 mb-4">Related Articles</h2>
+          <section className="mt-12 border-t border-white/8 pt-10">
+            <h2 className="text-lg font-semibold text-white mb-4 tracking-tight">Related Articles</h2>
             <div className="grid sm:grid-cols-2 gap-3">
               {related.map((a) => (
                 <Link
                   key={a.slug}
                   to={`/blog/${a.slug}`}
-                  className="p-4 rounded-lg border border-gray-100 hover:border-primary/30 hover:shadow-sm transition-all"
+                  className="glass-card p-4 rounded-xl group"
                 >
                   <span className="text-xs font-semibold text-primary">{a.category}</span>
-                  <h3 className="font-semibold text-gray-900 mt-1 text-sm leading-snug">{a.title}</h3>
+                  <h3 className="font-semibold text-white/80 group-hover:text-white mt-1 text-sm leading-snug transition-colors duration-150">{a.title}</h3>
                 </Link>
               ))}
             </div>
