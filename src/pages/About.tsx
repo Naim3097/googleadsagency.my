@@ -20,7 +20,7 @@ export default function About() {
         schema={personSchema}
       />
 
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         <FadeIn>
           <h1 className="text-3xl md:text-4xl font-medium text-white tracking-tight" style={{ letterSpacing: '-0.02em' }}>About</h1>
           <p className="mt-3 text-white/50 text-sm max-w-xl leading-relaxed">

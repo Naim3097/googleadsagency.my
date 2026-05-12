@@ -11,7 +11,7 @@ export default function Contact() {
         canonical="/contact"
       />
 
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         <FadeIn>
           <h1 className="text-3xl md:text-4xl font-medium text-white tracking-tight" style={{ letterSpacing: '-0.02em' }}>Contact</h1>
           <p className="text-white/45 mt-2 text-sm">
